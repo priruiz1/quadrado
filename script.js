@@ -29,104 +29,6 @@ function girar(){
     let quadrado = document.getElementById('quadrado')
     quadrado.style.transform = 'rotate(40deg)'
 }
-function mudarCor(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.backgroundColor = 'red'
-}
-
-function mudarForma(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.borderRadius = '50%'
-}
-
-function voltar(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.backgroundColor = 'lightblue'
-    quadrado.style.borderRadius = '0'
-}
-
-function diminuir(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.width = '100px'
-    quadrado.style.height = '100px'
-}
-
-function aumentar(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.width = '500px'
-    quadrado.style.height = '500px'
-}
-
-function girar(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.transform = 'rotate(40deg)'
-}
-
-function mudarCor(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.backgroundColor = 'red'
-}
-
-function mudarForma(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.borderRadius = '50%'
-}
-
-function voltar(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.backgroundColor = 'lightblue'
-    quadrado.style.borderRadius = '0'
-}
-
-function diminuir(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.width = '100px'
-    quadrado.style.height = '100px'
-}
-
-function aumentar(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.width = '500px'
-    quadrado.style.height = '500px'
-}
-
-function girar(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.transform = 'rotate(40deg)'
-}
-function mudarCor(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.backgroundColor = 'red'
-}
-
-function mudarForma(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.borderRadius = '50%'
-}
-
-function voltar(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.backgroundColor = 'lightblue'
-    quadrado.style.borderRadius = '0'
-}
-
-function diminuir(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.width = '100px'
-    quadrado.style.height = '100px'
-}
-
-function aumentar(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.width = '500px'
-    quadrado.style.height = '500px'
-}
-
-function girar(){
-    let quadrado = document.getElementById('quadrado')
-    quadrado.style.transform = 'rotate(40deg)'
-}
-
 // variáveis globais de controle
 let surpresaIntervalId = null;
 let surpresaTimeoutId = null;
@@ -189,4 +91,6 @@ function surpresa(){
         pararSurpresa(quadrado);
     }, 5000);
 }
+
+
 
