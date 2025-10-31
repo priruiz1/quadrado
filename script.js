@@ -94,8 +94,40 @@ function girar(){
     let quadrado = document.getElementById('quadrado')
     quadrado.style.transform = 'rotate(40deg)'
 }
+function mudarCor(){
+    let quadrado = document.getElementById('quadrado')
+    quadrado.style.backgroundColor = 'red'
+}
 
-// variável global de controle
+function mudarForma(){
+    let quadrado = document.getElementById('quadrado')
+    quadrado.style.borderRadius = '50%'
+}
+
+function voltar(){
+    let quadrado = document.getElementById('quadrado')
+    quadrado.style.backgroundColor = 'lightblue'
+    quadrado.style.borderRadius = '0'
+}
+
+function diminuir(){
+    let quadrado = document.getElementById('quadrado')
+    quadrado.style.width = '100px'
+    quadrado.style.height = '100px'
+}
+
+function aumentar(){
+    let quadrado = document.getElementById('quadrado')
+    quadrado.style.width = '500px'
+    quadrado.style.height = '500px'
+}
+
+function girar(){
+    let quadrado = document.getElementById('quadrado')
+    quadrado.style.transform = 'rotate(40deg)'
+}
+
+// variáveis globais de controle
 let surpresaIntervalId = null;
 let surpresaTimeoutId = null;
 
@@ -110,10 +142,11 @@ function pararSurpresa(quadrado) {
     }
     quadrado.style.transition = 'none';
     quadrado.style.transform = 'none';
+    quadrado.style.backgroundColor = 'lightblue'; // volta à cor original
 }
 
 /**
- * Faz o quadrado girar e se mover pela tela por 5 segundos.
+ * Faz o quadrado girar, mover e mudar de cor por 5 segundos.
  */
 function surpresa(){
     let quadrado = document.getElementById('quadrado')
@@ -130,6 +163,14 @@ function surpresa(){
     let offsetX = 0;
     let direction = 1;
 
+    // Função para gerar cor aleatória
+    function corAleatoria() {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+
     // Inicia a animação
     surpresaIntervalId = setInterval(() => {
         rot += 15;
@@ -140,7 +181,8 @@ function surpresa(){
         }
 
         quadrado.style.transform = `translateX(${offsetX}px) rotate(${rot}deg)`;
-    }, 50);
+        quadrado.style.backgroundColor = corAleatoria(); // muda a cor constantemente
+    }, 100); // atualiza a cada 100ms
 
     // Para automaticamente após 5 segundos
     surpresaTimeoutId = setTimeout(() => {
